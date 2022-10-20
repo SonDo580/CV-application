@@ -19,7 +19,11 @@ class App extends Component {
         <Education />
         <Experience />
         <p>
-          <button>Submit</button>
+          {this.state.editMode ? (
+            <button>Submit</button>
+          ) : (
+            <button>Edit</button>
+          )}
         </p>
       </div>
     );
