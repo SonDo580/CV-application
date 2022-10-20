@@ -4,12 +4,12 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 
 class App extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     editMode: true,
-  //   };
-  // }
+  constructor() {
+    super();
+    this.state = {
+      editMode: true,
+    };
+  }
 
   render() {
     return (
