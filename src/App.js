@@ -15,9 +15,9 @@ class App extends Component {
     return (
       <div>
         <h1>My CV</h1>
-        <Information />
-        <Education />
-        <Experience />
+        <Information editMode={this.state.editMode} />
+        <Education editMode={this.state.editMode} />
+        <Experience editMode={this.state.editMode} />
         <p>
           {this.state.editMode ? (
             <button>Submit</button>
