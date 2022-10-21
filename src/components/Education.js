@@ -12,7 +12,11 @@ class Education extends Component {
   render() {
     return (
       <div>
-        <div className="schools">{/* {this.state.schools.map} */}</div>
+        <div className="schools">
+          {this.state.schools.map(() => {
+            return <School editMode={this.props.editMode} />;
+          })}
+        </div>
         <button>Add school</button>
       </div>
     );
