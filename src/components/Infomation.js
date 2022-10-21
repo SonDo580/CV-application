@@ -7,7 +7,11 @@ class Information extends Component {
         <h2>Information</h2>
         <div className="field">
           <label htmlFor="fullName">Full Name</label>
-          <input type="text" name="fullName" id="fullName" />
+          {this.props.editMode ? (
+            <input type="text" name="fullName" id="fullName" />
+          ) : (
+            <span>x</span>
+          )}
         </div>
         <div className="field">
           <label htmlFor="email">Email</label>

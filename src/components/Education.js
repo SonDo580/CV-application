@@ -25,7 +25,7 @@ class Education extends Component {
           })}
         </div>
         <p className="buttonContainer">
-          <button onClick={this.addSchool}>Add school</button>
+          <button onClick={this.addSchool}>Add School</button>
         </p>
       </div>
     );

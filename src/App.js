@@ -12,6 +12,8 @@ class App extends Component {
     };
   }
 
+  submitCV = () => {};
+
   render() {
     return (
       <div className="app">
@@ -25,7 +27,7 @@ class App extends Component {
         <hr />
         <p className="submitButtonContainer">
           {this.state.editMode ? (
-            <button>Submit</button>
+            <button onClick={this.submitCV}>Submit</button>
           ) : (
             <button>Edit</button>
           )}
