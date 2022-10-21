@@ -17,7 +17,7 @@ class Experience extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="companies">
           {this.state.companies.map(() => {
             return <Company editMode={this.props.editMode} />;

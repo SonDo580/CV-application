@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Information extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="field">
           <label htmlFor="fullName">Full Name</label>
           <input type="text" name="fullName" id="fullName" />
