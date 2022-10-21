@@ -23,7 +23,7 @@ class Education extends Component {
             return <School editMode={this.props.editMode} />;
           })}
         </div>
-        <button>Add school</button>
+        <button onClick={this.addSchool}>Add school</button>
       </div>
     );
   }
