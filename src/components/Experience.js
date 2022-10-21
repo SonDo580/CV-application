@@ -9,6 +9,12 @@ class Experience extends Component {
     };
   }
 
+  addCompany = () => {
+    this.setState((state) => ({
+      companies: state.companies.concat(""),
+    }));
+  };
+
   render() {
     return (
       <div>
@@ -17,7 +23,7 @@ class Experience extends Component {
             return <Company editMode={this.props.editMode} />;
           })}
         </div>
-        <button>Add workspace</button>
+        <button>Add Company</button>
       </div>
     );
   }
