@@ -9,6 +9,12 @@ class Education extends Component {
     };
   }
 
+  addSchool = () => {
+    this.setState((state) => ({
+      schools: state.schools.concat(""),
+    }));
+  };
+
   render() {
     return (
       <div>
