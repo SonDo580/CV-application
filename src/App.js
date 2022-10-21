@@ -23,7 +23,7 @@ class App extends Component {
         <hr />
         <Experience editMode={this.state.editMode} />
         <hr />
-        <p>
+        <p className="submitButtonContainer">
           {this.state.editMode ? (
             <button>Submit</button>
           ) : (

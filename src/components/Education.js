@@ -24,7 +24,9 @@ class Education extends Component {
             return <School editMode={this.props.editMode} />;
           })}
         </div>
-        <button onClick={this.addSchool}>Add school</button>
+        <p className="buttonContainer">
+          <button onClick={this.addSchool}>Add school</button>
+        </p>
       </div>
     );
   }

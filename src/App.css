@@ -1,6 +1,75 @@
 .app {
   width: 60%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: white;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  color: blueviolet;
+}
+
+.container {
+  padding: 10px 50px;
+}
+
+.container h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: darkcyan;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  margin-bottom: 10px;
+}
+
+.field label {
+  text-align: right;
+  margin-right: 10px;
+  color: darkblue;
+}
+
+.field input {
+  border: 1px solid black;
+  height: 15px;
+  padding: 5px;
+}
+
+.buttonContainer {
+  text-align: right;
+}
+
+.submitButtonContainer {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+
+button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+}
+
+.school,
+.company {
+  border: 2px solid blueviolet;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
