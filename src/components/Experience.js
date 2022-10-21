@@ -23,7 +23,7 @@ class Experience extends Component {
             return <Company editMode={this.props.editMode} />;
           })}
         </div>
-        <button>Add Company</button>
+        <button onClick={this.addCompany}>Add Company</button>
       </div>
     );
   }
