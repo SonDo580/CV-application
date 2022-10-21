@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
         <h1>My CV</h1>
         <hr />
         <Information editMode={this.state.editMode} />
