@@ -12,7 +12,11 @@ class Experience extends Component {
   render() {
     return (
       <div>
-        <Company editMode={this.props.editMode} />
+        <div className="companies">
+          {this.state.companies.map(() => {
+            return <Company editMode={this.props.editMode} />;
+          })}
+        </div>
         <button>Add workspace</button>
       </div>
     );
