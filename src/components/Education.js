@@ -5,16 +5,14 @@ class Education extends Component {
   constructor() {
     super();
     this.state = {
-      numSchool: 1,
+      schools: [""],
     };
   }
 
   render() {
     return (
       <div>
-        <div className="schools">
-          <School editMode={this.props.editMode} />
-        </div>
+        <div className="schools">{/* {this.state.schools.map} */}</div>
         <button>Add school</button>
       </div>
     );
