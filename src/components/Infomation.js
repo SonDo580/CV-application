@@ -4,6 +4,7 @@ class Information extends Component {
   render() {
     return (
       <div className="container">
+        <h2>Information</h2>
         <div className="field">
           <label htmlFor="fullName">Full Name</label>
           <input type="text" name="fullName" id="fullName" />

@@ -18,6 +18,7 @@ class Education extends Component {
   render() {
     return (
       <div className="container">
+        <h2>Education</h2>
         <div className="schools">
           {this.state.schools.map(() => {
             return <School editMode={this.props.editMode} />;
