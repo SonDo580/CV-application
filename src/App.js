@@ -12,7 +12,9 @@ class App extends Component {
     };
   }
 
-  submitCV = () => {};
+  submitCV = () => {
+    this.setState({ editMode: false });
+  };
 
   render() {
     return (
