@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 
 class Information extends Component {
+  constructor() {
+    super();
+    this.state = {
+      fullName: "",
+      email: "",
+      phone: "",
+    };
+  }
+
   render() {
     return (
       <div className="container">
@@ -8,11 +17,7 @@ class Information extends Component {
 
         <div className="field">
           <label htmlFor="fullName">Full Name</label>
-          {this.props.editMode ? (
-            <input type="text" name="fullName" id="fullName" />
-          ) : (
-            <span>x</span>
-          )}
+          <input type="text" name="fullName" id="fullName" />
         </div>
 
         <div className="field">
@@ -22,7 +27,7 @@ class Information extends Component {
 
         <div className="field">
           <label htmlFor="phone">Phone</label>
-          <input type="number" name="phone" id="phone" />
+          <input type="text" name="phone" id="phone" />
         </div>
 
         <p className="submitButtonContainer">
