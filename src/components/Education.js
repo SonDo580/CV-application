@@ -23,7 +23,7 @@ class Education extends Component {
 
         <p className="submitButtonContainer">
           {this.props.editMode ? (
-            <button onClick={this.submitCV}>Submit</button>
+            <button onClick={this.submitSection}>Submit</button>
           ) : (
             <button>Edit</button>
           )}
