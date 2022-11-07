@@ -12,10 +12,6 @@ class App extends Component {
     };
   }
 
-  submitCV = () => {
-    this.setState({ editMode: false });
-  };
-
   render() {
     return (
       <div className="app">
