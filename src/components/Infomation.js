@@ -10,6 +10,8 @@ class Information extends Component {
     };
   }
 
+  handleChange = () => {};
+
   render() {
     return (
       <form className="container">
@@ -22,6 +24,7 @@ class Information extends Component {
             name="fullName"
             id="fullName"
             value={this.state.fullName}
+            onChange={this.handleChange}
           />
         </div>
 
@@ -32,6 +35,7 @@ class Information extends Component {
             name="email"
             id="email"
             value={this.state.email}
+            onChange={this.handleChange}
           />
         </div>
 
@@ -43,6 +47,7 @@ class Information extends Component {
             id="phone"
             pattern="0[0-9]{9}"
             value={this.state.phone}
+            onChange={this.handleChange}
           />
         </div>
 
