@@ -27,7 +27,7 @@ class Education extends Component {
 
   render() {
     return (
-      <form className="container" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <h2>Education</h2>
 
         <div className="field">

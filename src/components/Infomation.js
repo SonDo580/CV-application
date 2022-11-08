@@ -27,7 +27,7 @@ class Information extends Component {
 
   render() {
     return (
-      <form className="container" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <h2>Information</h2>
 
         <div className="field">

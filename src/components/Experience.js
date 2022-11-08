@@ -28,7 +28,7 @@ class Experience extends Component {
 
   render() {
     return (
-      <form className="container" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <h2>Experience</h2>
 
         <div className="field">
