@@ -32,6 +32,7 @@ class Information extends Component {
             name="fullName"
             value={this.state.fullName}
             onChange={this.handleChange}
+            required
           />
         </div>
 
@@ -42,6 +43,7 @@ class Information extends Component {
             name="email"
             value={this.state.email}
             onChange={this.handleChange}
+            required
           />
         </div>
 
@@ -53,6 +55,7 @@ class Information extends Component {
             pattern="0[0-9]{9}"
             value={this.state.phone}
             onChange={this.handleChange}
+            required
           />
         </div>
 
