@@ -30,50 +30,59 @@ class Education extends Component {
       <form onSubmit={this.handleSubmit}>
         <h2>Education</h2>
 
-        <div className="field">
-          <label>School Name</label>
-          {this.state.editMode ? (
-            <input
-              type="text"
-              name="school"
-              value={this.state.school}
-              onChange={this.handleChange}
-              required
-            />
-          ) : (
-            <p>{this.state.school}</p>
-          )}
-        </div>
+        {this.state.editMode ? (
+          <div className="container">
+            <div className="field">
+              <label>School Name</label>
+              <input
+                type="text"
+                name="school"
+                value={this.state.school}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
 
-        <div className="field">
-          <label>Title of Study</label>
-          {this.state.editMode ? (
-            <input
-              type="text"
-              name="title"
-              value={this.state.title}
-              onChange={this.handleChange}
-              required
-            />
-          ) : (
-            <p>{this.state.title}</p>
-          )}
-        </div>
+            <div className="field">
+              <label>Title of Study</label>
+              <input
+                type="text"
+                name="title"
+                value={this.state.title}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
 
-        <div className="field">
-          <label>Date of study</label>
-          {this.state.editMode ? (
-            <input
-              type="text"
-              name="date"
-              value={this.state.date}
-              onChange={this.handleChange}
-              required
-            />
-          ) : (
-            <p>{this.state.date}</p>
-          )}
-        </div>
+            <div className="field">
+              <label>Date of study</label>
+              <input
+                type="text"
+                name="date"
+                value={this.state.date}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
+          </div>
+        ) : (
+          <table>
+            <tbody>
+              <tr>
+                <th scope="row">School Name</th>
+                <td>{this.state.school}</td>
+              </tr>
+              <tr>
+                <th scope="row">Title of Study</th>
+                <td>{this.state.title}</td>
+              </tr>
+              <tr>
+                <th scope="row">Date of Study</th>
+                <td>{this.state.date}</td>
+              </tr>
+            </tbody>
+          </table>
+        )}
 
         <p className="submitButtonContainer">
           <button>{this.state.editMode ? "Submit" : "Edit"}</button>
