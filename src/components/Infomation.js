@@ -32,36 +32,48 @@ class Information extends Component {
 
         <div className="field">
           <label>Full Name</label>
-          <input
-            type="text"
-            name="fullName"
-            value={this.state.fullName}
-            onChange={this.handleChange}
-            required
-          />
+          {this.state.editMode ? (
+            <input
+              type="text"
+              name="fullName"
+              value={this.state.fullName}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.fullName}</p>
+          )}
         </div>
 
         <div className="field">
           <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            required
-          />
+          {this.state.editMode ? (
+            <input
+              type="email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.email}</p>
+          )}
         </div>
 
         <div className="field">
           <label>Phone</label>
-          <input
-            type="tel"
-            name="phone"
-            pattern="0[0-9]{9}"
-            value={this.state.phone}
-            onChange={this.handleChange}
-            required
-          />
+          {this.state.editMode ? (
+            <input
+              type="tel"
+              name="phone"
+              pattern="0[0-9]{9}"
+              value={this.state.phone}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.phone}</p>
+          )}
         </div>
 
         <p className="submitButtonContainer">
