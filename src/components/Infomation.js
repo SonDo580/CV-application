@@ -12,7 +12,7 @@ class Information extends Component {
 
   render() {
     return (
-      <div className="container">
+      <form className="container">
         <h2>Information</h2>
 
         <div className="field">
@@ -53,7 +53,7 @@ class Information extends Component {
             <button>Edit</button>
           )}
         </p>
-      </div>
+      </form>
     );
   }
 }

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Experience extends Component {
   render() {
     return (
-      <div className="container">
+      <form className="container">
         <h2>Experience</h2>
 
         <div className="field">
@@ -33,7 +33,7 @@ class Experience extends Component {
             <button>Edit</button>
           )}
         </p>
-      </div>
+      </form>
     );
   }
 }
