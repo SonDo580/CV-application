@@ -23,6 +23,8 @@ class Information extends Component {
 
   submitSection = () => {};
 
+  editSection = () => {};
+
   render() {
     return (
       <form className="container" onSubmit={this.handleSubmit}>
@@ -63,10 +65,10 @@ class Information extends Component {
         </div>
 
         <p className="submitButtonContainer">
-          {this.props.editMode ? (
+          {this.state.editMode ? (
             <button onClick={this.submitSection}>Submit</button>
           ) : (
-            <button>Edit</button>
+            <button onClick={this.editSection}>Edit</button>
           )}
         </p>
       </form>
