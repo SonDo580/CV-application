@@ -25,11 +25,11 @@ class Information extends Component {
     });
   };
 
-  editSection = () => {
-    this.setState({
-      editMode: true,
-    });
-  };
+  // editSection = () => {
+  //   this.setState({
+  //     editMode: true,
+  //   });
+  // };
 
   render() {
     return (
@@ -83,11 +83,7 @@ class Information extends Component {
         </div>
 
         <p className="submitButtonContainer">
-          {this.state.editMode ? (
-            <button>Submit</button>
-          ) : (
-            <button onClick={this.editSection}>Edit</button>
-          )}
+          <button>{this.state.editMode ? "Submit" : "Edit"}</button>
         </p>
       </form>
     );
