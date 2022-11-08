@@ -5,23 +5,16 @@ import Experience from "./components/Experience";
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      editMode: true,
-    };
-  }
-
   render() {
     return (
       <div className="app">
         <h1>My CV</h1>
         <hr />
-        <Information editMode={this.state.editMode} />
+        <Information />
         <hr />
-        <Education editMode={this.state.editMode} />
+        <Education />
         <hr />
-        <Experience editMode={this.state.editMode} />
+        <Experience />
       </div>
     );
   }
