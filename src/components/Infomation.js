@@ -21,9 +21,17 @@ class Information extends Component {
     });
   };
 
-  submitSection = () => {};
+  submitSection = () => {
+    this.setState({
+      editMode: false,
+    });
+  };
 
-  editSection = () => {};
+  editSection = () => {
+    this.setState({
+      editMode: true,
+    });
+  };
 
   render() {
     return (
