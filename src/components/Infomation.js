@@ -30,7 +30,6 @@ class Information extends Component {
           <input
             type="text"
             name="fullName"
-            id="fullName"
             value={this.state.fullName}
             onChange={this.handleChange}
           />
@@ -41,7 +40,6 @@ class Information extends Component {
           <input
             type="email"
             name="email"
-            id="email"
             value={this.state.email}
             onChange={this.handleChange}
           />
@@ -52,7 +50,6 @@ class Information extends Component {
           <input
             type="tel"
             name="phone"
-            id="phone"
             pattern="0[0-9]{9}"
             value={this.state.phone}
             onChange={this.handleChange}
