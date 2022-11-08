@@ -37,7 +37,13 @@ class Information extends Component {
 
         <div className="field">
           <label htmlFor="phone">Phone</label>
-          <input type="text" name="phone" id="phone" value={this.state.phone} />
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            pattern="0[0-9]{9}"
+            value={this.state.phone}
+          />
         </div>
 
         <p className="submitButtonContainer">
