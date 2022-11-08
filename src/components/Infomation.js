@@ -31,18 +31,20 @@ class Information extends Component {
         <h2>Information</h2>
 
         <table>
-          <tr>
-            <th scope="row">Full Name</th>
-            <td>{this.state.fullName}</td>
-          </tr>
-          <tr>
-            <th scope="row">Email</th>
-            <td>{this.state.email}</td>
-          </tr>
-          <tr>
-            <th scope="row">Phone</th>
-            <td>{this.state.phone}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th scope="row">Full Name</th>
+              <td>{this.state.fullName}</td>
+            </tr>
+            <tr>
+              <th scope="row">Email</th>
+              <td>{this.state.email}</td>
+            </tr>
+            <tr>
+              <th scope="row">Phone</th>
+              <td>{this.state.phone}</td>
+            </tr>
+          </tbody>
         </table>
 
         <div className="field">
