@@ -26,7 +26,7 @@ class Information extends Component {
         <h2>Information</h2>
 
         <div className="field">
-          <label htmlFor="fullName">Full Name</label>
+          <label>Full Name</label>
           <input
             type="text"
             name="fullName"
@@ -37,7 +37,7 @@ class Information extends Component {
         </div>
 
         <div className="field">
-          <label htmlFor="email">Email</label>
+          <label>Email</label>
           <input
             type="email"
             name="email"
@@ -48,7 +48,7 @@ class Information extends Component {
         </div>
 
         <div className="field">
-          <label htmlFor="phone">Phone</label>
+          <label>Phone</label>
           <input
             type="tel"
             name="phone"
