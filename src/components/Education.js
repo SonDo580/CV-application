@@ -4,6 +4,9 @@ class Education extends Component {
   constructor() {
     super();
     this.state = {
+      school: "",
+      title: "",
+      date: "",
       editMode: true,
     };
   }
@@ -37,17 +40,47 @@ class Education extends Component {
 
         <div className="field">
           <label>School Name</label>
-          <input type="text" />
+          {this.state.editMode ? (
+            <input
+              type="text"
+              name="school"
+              value={this.state.school}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.school}</p>
+          )}
         </div>
 
         <div className="field">
           <label>Title of Study</label>
-          <input type="text" />
+          {this.state.editMode ? (
+            <input
+              type="text"
+              name="title"
+              value={this.state.title}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.title}</p>
+          )}
         </div>
 
         <div className="field">
           <label>Date of study</label>
-          <input type="text" />
+          {this.state.editMode ? (
+            <input
+              type="text"
+              name="date"
+              value={this.state.date}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.date}</p>
+          )}
         </div>
 
         <p className="submitButtonContainer">
