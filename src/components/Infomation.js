@@ -10,6 +10,10 @@ class Information extends Component {
     };
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -18,7 +22,7 @@ class Information extends Component {
 
   render() {
     return (
-      <form className="container">
+      <form className="container" onSubmit={this.handleSubmit}>
         <h2>Information</h2>
 
         <div className="field">
