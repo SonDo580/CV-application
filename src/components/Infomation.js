@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 
 class Information extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       fullName: "",
       email: "",
       phone: "",
+      editMode: this.props.editMode,
     };
   }
 
@@ -19,6 +20,8 @@ class Information extends Component {
       [event.target.name]: event.target.value,
     });
   };
+
+  submitSection = () => {};
 
   render() {
     return (
