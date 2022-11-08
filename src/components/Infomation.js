@@ -84,7 +84,7 @@ class Information extends Component {
 
         <p className="submitButtonContainer">
           {this.state.editMode ? (
-            <button onClick={this.handleSubmit}>Submit</button>
+            <button>Submit</button>
           ) : (
             <button onClick={this.editSection}>Edit</button>
           )}
