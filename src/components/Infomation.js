@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
 class Information extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       fullName: "",
       email: "",
       phone: "",
-      editMode: this.props.editMode,
+      editMode: true,
     };
   }
 

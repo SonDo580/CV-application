@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 
 class Education extends Component {
+  constructor() {
+    super();
+    this.state = {
+      editMode: true,
+    };
+  }
+
   render() {
     return (
       <form className="container">
@@ -22,7 +29,7 @@ class Education extends Component {
         </div>
 
         <p className="submitButtonContainer">
-          {this.props.editMode ? (
+          {this.state.editMode ? (
             <button onClick={this.submitSection}>Submit</button>
           ) : (
             <button>Edit</button>
