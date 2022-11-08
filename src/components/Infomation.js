@@ -17,17 +17,27 @@ class Information extends Component {
 
         <div className="field">
           <label htmlFor="fullName">Full Name</label>
-          <input type="text" name="fullName" id="fullName" />
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            value={this.state.fullName}
+          />
         </div>
 
         <div className="field">
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={this.state.email}
+          />
         </div>
 
         <div className="field">
           <label htmlFor="phone">Phone</label>
-          <input type="text" name="phone" id="phone" />
+          <input type="text" name="phone" id="phone" value={this.state.phone} />
         </div>
 
         <p className="submitButtonContainer">
