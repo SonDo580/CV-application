@@ -4,7 +4,7 @@ class Experience extends Component {
   constructor() {
     super();
     this.state = {
-      companyName: "",
+      company: "",
       position: "",
       tasks: "",
       date: "",
@@ -44,13 +44,13 @@ class Experience extends Component {
           {this.state.editMode ? (
             <input
               type="text"
-              name="companyName"
-              value={this.state.companyName}
+              name="company"
+              value={this.state.company}
               onChange={this.handleChange}
               required
             />
           ) : (
-            <p>{this.state.companyName}</p>
+            <p>{this.state.company}</p>
           )}
         </div>
 
