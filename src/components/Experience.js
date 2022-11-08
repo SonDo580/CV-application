@@ -4,6 +4,10 @@ class Experience extends Component {
   constructor() {
     super();
     this.state = {
+      companyName: "",
+      position: "",
+      tasks: "",
+      date: "",
       editMode: true,
     };
   }
@@ -37,22 +41,62 @@ class Experience extends Component {
 
         <div className="field">
           <label>Company Name</label>
-          <input type="text" />
+          {this.state.editMode ? (
+            <input
+              type="text"
+              name="companyName"
+              value={this.state.companyName}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.companyName}</p>
+          )}
         </div>
 
         <div className="field">
           <label>Position Title</label>
-          <input type="text" />
+          {this.state.editMode ? (
+            <input
+              type="text"
+              name="position"
+              value={this.state.position}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.position}</p>
+          )}
         </div>
 
         <div className="field">
           <label>Main Tasks</label>
-          <input type="text" />
+          {this.state.editMode ? (
+            <input
+              type="text"
+              name="tasks"
+              value={this.state.tasks}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.tasks}</p>
+          )}
         </div>
 
         <div className="field">
           <label>Date from and until</label>
-          <input type="text" />
+          {this.state.editMode ? (
+            <input
+              type="text"
+              name="date"
+              value={this.state.date}
+              onChange={this.handleChange}
+              required
+            />
+          ) : (
+            <p>{this.state.date}</p>
+          )}
         </div>
 
         <p className="submitButtonContainer">
