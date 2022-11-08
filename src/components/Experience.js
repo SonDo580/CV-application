@@ -8,9 +8,31 @@ class Experience extends Component {
     };
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  submitSection = () => {
+    this.setState({
+      editMode: false,
+    });
+  };
+
+  editSection = () => {
+    this.setState({
+      editMode: true,
+    });
+  };
+
   render() {
     return (
-      <form className="container">
+      <form className="container" onSubmit={this.handleSubmit}>
         <h2>Experience</h2>
 
         <div className="field">
@@ -37,7 +59,7 @@ class Experience extends Component {
           {this.state.editMode ? (
             <button onClick={this.submitSection}>Submit</button>
           ) : (
-            <button>Edit</button>
+            <button onClick={this.editSection}>Edit</button>
           )}
         </p>
       </form>
