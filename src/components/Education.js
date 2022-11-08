@@ -14,20 +14,14 @@ class Education extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    this.setState({
-      editMode: false,
-    });
+    this.setState((prevState) => ({
+      editMode: !prevState.editMode,
+    }));
   };
 
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
-    });
-  };
-
-  editSection = () => {
-    this.setState({
-      editMode: true,
     });
   };
 
@@ -82,11 +76,7 @@ class Education extends Component {
         </div>
 
         <p className="submitButtonContainer">
-          {this.state.editMode ? (
-            <button onClick={this.handleSubmit}>Submit</button>
-          ) : (
-            <button onClick={this.editSection}>Edit</button>
-          )}
+          <button>{this.state.editMode ? "Submit" : "Edit"}</button>
         </p>
       </form>
     );
