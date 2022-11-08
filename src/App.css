@@ -12,11 +12,11 @@ h1 {
   color: blueviolet;
 }
 
-.container {
+form {
   padding: 10px 50px;
 }
 
-.container h2 {
+form h2 {
   margin-top: 0;
   margin-bottom: 10px;
   text-align: center;
@@ -39,6 +39,10 @@ h1 {
   border: 1px solid black;
   height: 15px;
   padding: 5px;
+}
+
+.field p {
+  margin: 0;
 }
 
 .buttonContainer {
@@ -66,10 +70,20 @@ button:hover {
   background-color: blueviolet;
 }
 
-.school,
-.company {
-  border: 2px solid blueviolet;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 10px;
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
+
+table tr * {
+  border: 1px solid gray;
+  padding: 5px 10px;
+}
+
+table tr th {
+  width: 150px;
+  font-weight: normal;
+  color: green;
+}
+
+
