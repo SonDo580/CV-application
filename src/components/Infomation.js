@@ -14,9 +14,9 @@ class Information extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    this.setState({
-      editMode: false,
-    });
+    this.setState((prevState) => ({
+      editMode: !prevState.editMode,
+    }));
   };
 
   handleChange = (event) => {
@@ -24,12 +24,6 @@ class Information extends Component {
       [event.target.name]: event.target.value,
     });
   };
-
-  // editSection = () => {
-  //   this.setState({
-  //     editMode: true,
-  //   });
-  // };
 
   render() {
     return (
