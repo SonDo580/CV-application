@@ -23,6 +23,13 @@ h1 {
   color: darkcyan;
 }
 
+.school,
+.company {
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .field {
   display: grid;
   grid-template-columns: 150px 1fr;
