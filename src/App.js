@@ -22,6 +22,10 @@ class App extends Component {
         <Education editMode={this.state.editMode} />
         <hr />
         <Experience editMode={this.state.editMode} />
+        <hr />
+        <p className="submitButtonContainer">
+          <button>{this.state.editMode ? "Submit" : "Edit"}</button>
+        </p>
       </div>
     );
   }
