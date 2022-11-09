@@ -8,7 +8,6 @@ class Experience extends Component {
       position: "",
       tasks: "",
       date: "",
-      editMode: true,
     };
   }
 
@@ -23,7 +22,7 @@ class Experience extends Component {
       <div className="container">
         <h2>Experience</h2>
 
-        {this.state.editMode ? (
+        {this.props.editMode ? (
           <div className="input-group">
             <div className="field">
               <label>Company Name</label>

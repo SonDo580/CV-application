@@ -7,7 +7,6 @@ class Information extends Component {
       fullName: "",
       email: "",
       phone: "",
-      editMode: true,
     };
   }
 
@@ -22,7 +21,7 @@ class Information extends Component {
       <div className="container">
         <h2>Information</h2>
 
-        {this.state.editMode ? (
+        {this.props.editMode ? (
           <div className="input-group">
             <div className="field">
               <label>Full Name</label>

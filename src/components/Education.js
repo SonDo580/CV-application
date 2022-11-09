@@ -7,7 +7,6 @@ class Education extends Component {
       school: "",
       title: "",
       date: "",
-      editMode: true,
     };
   }
 
@@ -22,7 +21,7 @@ class Education extends Component {
       <div className="container">
         <h2>Education</h2>
 
-        {this.state.editMode ? (
+        {this.props.editMode ? (
           <div className="input-group">
             <div className="field">
               <label>School Name</label>
