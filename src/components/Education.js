@@ -20,8 +20,8 @@ class Education extends Component {
       <div className="container">
         <h2>Education</h2>
 
-        {this.state.schools.map((school) => {
-          return <School editMode={this.props.editMode} />;
+        {this.state.schools.map((school, index) => {
+          return <School editMode={this.props.editMode} key={index} />;
         })}
 
         {this.props.editMode ? (
