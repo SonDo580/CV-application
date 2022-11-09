@@ -12,9 +12,17 @@ class App extends Component {
     };
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    this.setState((prevState) => ({
+      editMode: !prevState.editMode,
+    }));
+  };
+
   render() {
     return (
-      <form className="app">
+      <form className="app" onSubmit={this.handleSubmit}>
         <h1>My CV</h1>
         <hr />
         <Information editMode={this.state.editMode} />
