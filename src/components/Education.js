@@ -9,6 +9,12 @@ class Education extends Component {
     };
   }
 
+  addSchool = () => {
+    this.setState((prevState) => ({
+      schools: prevState.schools.concat(""),
+    }));
+  };
+
   render() {
     return (
       <div className="container">
@@ -20,7 +26,9 @@ class Education extends Component {
 
         {this.props.editMode ? (
           <p className="buttonContainer">
-            <button>Add School</button>
+            <button type="button" onClick={this.addSchool}>
+              Add School
+            </button>
           </p>
         ) : (
           ""
