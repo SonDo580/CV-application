@@ -23,7 +23,7 @@ class Experience extends Component {
         <h2>Experience</h2>
 
         {this.props.editMode ? (
-          <div className="input-group school">
+          <div className="input-group company">
             <div className="field">
               <label>Company Name</label>
               <input
