@@ -11,14 +11,6 @@ class Information extends Component {
     };
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    this.setState((prevState) => ({
-      editMode: !prevState.editMode,
-    }));
-  };
-
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -27,7 +19,7 @@ class Information extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <div className="container">
         <h2>Information</h2>
 
         {this.state.editMode ? (
@@ -88,7 +80,7 @@ class Information extends Component {
         <p className="submitButtonContainer">
           <button>{this.state.editMode ? "Submit" : "Edit"}</button>
         </p>
-      </form>
+      </div>
     );
   }
 }
