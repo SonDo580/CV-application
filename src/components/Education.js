@@ -75,10 +75,6 @@ class Education extends Component {
             </tbody>
           </table>
         )}
-
-        <p className="submitButtonContainer">
-          <button>{this.state.editMode ? "Submit" : "Edit"}</button>
-        </p>
       </div>
     );
   }
