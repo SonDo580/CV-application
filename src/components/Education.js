@@ -74,6 +74,14 @@ class Education extends Component {
             </tbody>
           </table>
         )}
+
+        {this.props.editMode ? (
+          <p className="buttonContainer">
+            <button>Add School</button>
+          </p>
+        ) : (
+          ""
+        )}
       </div>
     );
   }

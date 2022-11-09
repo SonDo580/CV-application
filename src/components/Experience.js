@@ -90,6 +90,14 @@ class Experience extends Component {
             </tbody>
           </table>
         )}
+
+        {this.props.editMode ? (
+          <p className="buttonContainer">
+            <button>Add Company</button>
+          </p>
+        ) : (
+          ""
+        )}
       </div>
     );
   }
