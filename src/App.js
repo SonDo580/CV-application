@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <form className="app">
         <h1>My CV</h1>
         <hr />
         <Information editMode={this.state.editMode} />
@@ -26,7 +26,7 @@ class App extends Component {
         <p className="submitButtonContainer">
           <button>{this.state.editMode ? "Submit" : "Edit"}</button>
         </p>
-      </div>
+      </form>
     );
   }
 }
