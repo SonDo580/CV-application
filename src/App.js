@@ -5,6 +5,13 @@ import Experience from "./components/Experience";
 import "./App.css";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      editMode: true,
+    };
+  }
+
   render() {
     return (
       <div className="app">
