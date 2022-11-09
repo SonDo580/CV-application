@@ -1,20 +1,18 @@
 import React, { Component } from "react";
+import Company from "./Company";
 
 class Experience extends Component {
   constructor() {
     super();
     this.state = {
-      company: "",
-      position: "",
-      tasks: "",
-      date: "",
+      companies: [""],
     };
   }
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+  addCompany = () => {
+    this.setState((prevState) => ({
+      companies: prevState.companies.concat(""),
+    }));
   };
 
   render() {
@@ -22,78 +20,15 @@ class Experience extends Component {
       <div className="container">
         <h2>Experience</h2>
 
-        {this.props.editMode ? (
-          <div className="input-group company">
-            <div className="field">
-              <label>Company Name</label>
-              <input
-                type="text"
-                name="company"
-                value={this.state.company}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-
-            <div className="field">
-              <label>Position Title</label>
-              <input
-                type="text"
-                name="position"
-                value={this.state.position}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-
-            <div className="field">
-              <label>Main Tasks</label>
-              <input
-                type="text"
-                name="tasks"
-                value={this.state.tasks}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-
-            <div className="field">
-              <label>Date from and until</label>
-              <input
-                type="text"
-                name="date"
-                value={this.state.date}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-          </div>
-        ) : (
-          <table>
-            <tbody>
-              <tr>
-                <th scope="row">Company Name</th>
-                <td>{this.state.company}</td>
-              </tr>
-              <tr>
-                <th scope="row">Position Title</th>
-                <td>{this.state.position}</td>
-              </tr>
-              <tr>
-                <th scope="row">Main Tasks</th>
-                <td>{this.state.tasks}</td>
-              </tr>
-              <tr>
-                <th scope="row">Date from and until</th>
-                <td>{this.state.date}</td>
-              </tr>
-            </tbody>
-          </table>
-        )}
+        {this.state.companies.map((company, index) => {
+          return <Company editMode={this.props.editMode} key={index} />;
+        })}
 
         {this.props.editMode ? (
           <p className="buttonContainer">
-            <button>Add Company</button>
+            <button type="button" onClick={this.addCompany}>
+              Add Company
+            </button>
           </p>
         ) : (
           ""
