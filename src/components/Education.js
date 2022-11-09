@@ -22,7 +22,7 @@ class Education extends Component {
         <h2>Education</h2>
 
         {this.props.editMode ? (
-          <div className="input-group">
+          <div className="input-group company">
             <div className="field">
               <label>School Name</label>
               <input
