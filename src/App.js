@@ -17,11 +17,11 @@ class App extends Component {
       <div className="app">
         <h1>My CV</h1>
         <hr />
-        <Information />
+        <Information editMode={this.state.editMode} />
         <hr />
-        <Education />
+        <Education editMode={this.state.editMode} />
         <hr />
-        <Experience />
+        <Experience editMode={this.state.editMode} />
       </div>
     );
   }
