@@ -5,9 +5,7 @@ class Education extends Component {
   constructor() {
     super();
     this.state = {
-      school: "",
-      title: "",
-      date: "",
+      schools: ["", ""],
     };
   }
 
