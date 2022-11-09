@@ -31,7 +31,7 @@ class Education extends Component {
         <h2>Education</h2>
 
         {this.state.editMode ? (
-          <div className="container">
+          <div className="input-group">
             <div className="field">
               <label>School Name</label>
               <input

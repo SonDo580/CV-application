@@ -32,7 +32,7 @@ class Experience extends Component {
         <h2>Experience</h2>
 
         {this.state.editMode ? (
-          <div className="container">
+          <div className="input-group">
             <div className="field">
               <label>Company Name</label>
               <input
