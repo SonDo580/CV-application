@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import School from "./School";
 
 class Education extends Component {
   constructor() {
@@ -14,6 +15,7 @@ class Education extends Component {
     return (
       <div className="container">
         <h2>Education</h2>
+        <School />
 
         {this.props.editMode ? (
           <div className="input-group school">
