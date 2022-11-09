@@ -5,7 +5,7 @@ class Education extends Component {
   constructor() {
     super();
     this.state = {
-      schools: ["", ""],
+      schools: [""],
     };
   }
 
@@ -13,7 +13,10 @@ class Education extends Component {
     return (
       <div className="container">
         <h2>Education</h2>
-        <School editMode={this.props.editMode} />
+
+        {this.state.schools.map((school) => {
+          return <School editMode={this.props.editMode} />;
+        })}
 
         {this.props.editMode ? (
           <p className="buttonContainer">
