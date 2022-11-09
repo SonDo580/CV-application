@@ -12,11 +12,11 @@ h1 {
   color: blueviolet;
 }
 
-form {
+.container {
   padding: 10px 50px;
 }
 
-form h2 {
+.container h2 {
   margin-top: 0;
   margin-bottom: 10px;
   text-align: center;
