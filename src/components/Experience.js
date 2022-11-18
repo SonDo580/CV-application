@@ -1,41 +1,32 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Company from "./Company";
 
-class Experience extends Component {
-  constructor() {
-    super();
-    this.state = {
-      companies: [""],
-    };
-  }
+const Experience = (props) => {
+  const [companies, setCompanies] = useState([""]);
 
-  addCompany = () => {
-    this.setState((prevState) => ({
-      companies: prevState.companies.concat(""),
-    }));
+  const addCompany = () => {
+    setCompanies((prevCompanies) => prevCompanies.concat(""));
   };
 
-  render() {
-    return (
-      <div className="container">
-        <h2>Experience</h2>
+  return (
+    <div className="container">
+      <h2>Experience</h2>
 
-        {this.state.companies.map((company, index) => {
-          return <Company editMode={this.props.editMode} key={index} />;
-        })}
+      {companies.map((company, index) => {
+        return <Company editMode={props.editMode} key={index} />;
+      })}
 
-        {this.props.editMode ? (
-          <p className="buttonContainer">
-            <button type="button" onClick={this.addCompany}>
-              Add Company
-            </button>
-          </p>
-        ) : (
-          ""
-        )}
-      </div>
-    );
-  }
-}
+      {props.editMode ? (
+        <p className="buttonContainer">
+          <button type="button" onClick={addCompany}>
+            Add Company
+          </button>
+        </p>
+      ) : (
+        ""
+      )}
+    </div>
+  );
+};
 
 export default Experience;
