@@ -54,9 +54,7 @@ class Experience extends Component {
               Add Company
             </button>
           </p>
-        ) : (
-          ""
-        )}
+        ) : null}
       </div>
     );
   }

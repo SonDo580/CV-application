@@ -54,9 +54,7 @@ class Education extends Component {
               Add School
             </button>
           </p>
-        ) : (
-          ""
-        )}
+        ) : null}
       </div>
     );
   }
