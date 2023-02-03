@@ -16,13 +16,27 @@ class Education extends Component {
     }));
   };
 
+  removeSchool = (id) => {
+    console.log(id);
+
+    this.setState((prevState) => ({
+      // schools: prevState.schools.concat(""),
+    }));
+  };
+
   render() {
     return (
       <div className="container">
         <h2>Education</h2>
 
         {this.state.schools.map(() => {
-          return <School editMode={this.props.editMode} key={uuidv4()} />;
+          return (
+            <School
+              key={uuidv4()}
+              editMode={this.props.editMode}
+              deleteSchool={this.removeSchool}
+            />
+          );
         })}
 
         {this.props.editMode ? (
