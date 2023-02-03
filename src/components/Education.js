@@ -6,13 +6,13 @@ class Education extends Component {
   constructor() {
     super();
     this.state = {
-      schools: [""],
+      schools: [{ id: uuidv4() }],
     };
   }
 
   addSchool = () => {
     this.setState((prevState) => ({
-      schools: prevState.schools.concat(""),
+      schools: prevState.schools.concat({ id: uuidv4() }),
     }));
   };
 
@@ -29,12 +29,13 @@ class Education extends Component {
       <div className="container">
         <h2>Education</h2>
 
-        {this.state.schools.map(() => {
+        {this.state.schools.map((school) => {
           return (
             <School
-              key={uuidv4()}
+              key={school.id}
               editMode={this.props.editMode}
               deleteSchool={this.removeSchool}
+              id={school.id}
             />
           );
         })}
