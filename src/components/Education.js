@@ -34,7 +34,7 @@ class Education extends Component {
             <School
               key={school.id}
               editMode={this.props.editMode}
-              deleteSchool={this.removeSchool}
+              removeSchool={this.removeSchool}
               id={school.id}
             />
           );
