@@ -1,92 +1,90 @@
-import React, { Component } from "react";
+import { useState } from "react";
 
-class School extends Component {
-  constructor() {
-    super();
-    this.state = {
-      school: "",
-      title: "",
-      date: "",
-    };
-  }
+export default function School(props) {
+  const { editMode, removeSchool, removeAllowed, id } = props;
 
-  handleChange = (event) => {
-    this.setState({
+  const [state, setState] = useState({
+    school: "",
+    title: "",
+    date: "",
+  });
+
+  const { school, title, date } = state;
+
+  const handleChange = (event) => {
+    setState({
+      ...state,
       [event.target.name]: event.target.value,
     });
   };
 
-  render() {
-    return (
-      <div>
-        {this.props.editMode ? (
-          <div className="input-group school">
-            <div className="field">
-              <label>School Name</label>
-              <input
-                type="text"
-                name="school"
-                value={this.state.school}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-
-            <div className="field">
-              <label>Title of Study</label>
-              <input
-                type="text"
-                name="title"
-                value={this.state.title}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-
-            <div className="field">
-              <label>Date of study</label>
-              <input
-                type="text"
-                name="date"
-                value={this.state.date}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-
-            {this.props.removeAllowed ? (
-              <p className="buttonContainer">
-                <button
-                  type="button"
-                  className="danger"
-                  onClick={() => this.props.removeSchool(this.props.id)}
-                >
-                  Remove this school
-                </button>
-              </p>
-            ) : null}
+  return (
+    <div>
+      {editMode ? (
+        <div className="input-group school">
+          <div className="field">
+            <label>School Name</label>
+            <input
+              type="text"
+              name="school"
+              value={school}
+              onChange={handleChange}
+              required
+            />
           </div>
-        ) : (
-          <table>
-            <tbody>
-              <tr>
-                <th scope="row">School Name</th>
-                <td>{this.state.school}</td>
-              </tr>
-              <tr>
-                <th scope="row">Title of Study</th>
-                <td>{this.state.title}</td>
-              </tr>
-              <tr>
-                <th scope="row">Date of Study</th>
-                <td>{this.state.date}</td>
-              </tr>
-            </tbody>
-          </table>
-        )}
-      </div>
-    );
-  }
-}
 
-export default School;
+          <div className="field">
+            <label>Title of Study</label>
+            <input
+              type="text"
+              name="title"
+              value={title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="field">
+            <label>Date of study</label>
+            <input
+              type="text"
+              name="date"
+              value={date}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          {removeAllowed ? (
+            <p className="buttonContainer">
+              <button
+                type="button"
+                className="danger"
+                onClick={() => removeSchool(id)}
+              >
+                Remove this school
+              </button>
+            </p>
+          ) : null}
+        </div>
+      ) : (
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row">School Name</th>
+              <td>{school}</td>
+            </tr>
+            <tr>
+              <th scope="row">Title of Study</th>
+              <td>{title}</td>
+            </tr>
+            <tr>
+              <th scope="row">Date of Study</th>
+              <td>{date}</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+    </div>
+  );
+}
