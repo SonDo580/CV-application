@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Information from "./components/Infomation";
+import Information from "./components/Information";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import "./App.css";
