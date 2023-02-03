@@ -58,6 +58,7 @@ class School extends Component {
               {this.props.removeAllowed ? (
                 <button
                   type="button"
+                  className="danger"
                   onClick={() => this.props.removeSchool(this.props.id)}
                 >
                   Remove this school
