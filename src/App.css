@@ -78,6 +78,14 @@ button:hover {
   background-color: blueviolet;
 }
 
+button.danger {
+  background-color: red;
+}
+
+button.danger:hover {
+  background-color: darkred;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -94,5 +102,3 @@ table tr th {
   font-weight: normal;
   color: green;
 }
-
-
