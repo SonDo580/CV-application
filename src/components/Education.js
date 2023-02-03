@@ -17,11 +17,18 @@ class Education extends Component {
   };
 
   removeSchool = (id) => {
-    console.log(id);
+    this.setState((prevState) => {
+      const indexRemove = prevState.schools.findIndex(
+        (school) => school.id === id
+      );
 
-    this.setState((prevState) => ({
-      // schools: prevState.schools.concat(""),
-    }));
+      return {
+        schools: [
+          ...prevState.schools.slice(0, indexRemove),
+          ...prevState.schools.slice(indexRemove + 1),
+        ],
+      };
+    });
   };
 
   render() {
@@ -33,9 +40,9 @@ class Education extends Component {
           return (
             <School
               key={school.id}
+              id={school.id}
               editMode={this.props.editMode}
               removeSchool={this.removeSchool}
-              id={school.id}
               removeAllowed={this.state.schools.length !== 1}
             />
           );
