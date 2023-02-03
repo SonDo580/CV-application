@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { v4 as uuidv4 } from "uuid";
 import School from "./School";
 
 class Education extends Component {
@@ -20,8 +21,8 @@ class Education extends Component {
       <div className="container">
         <h2>Education</h2>
 
-        {this.state.schools.map((school, index) => {
-          return <School editMode={this.props.editMode} key={index} />;
+        {this.state.schools.map(() => {
+          return <School editMode={this.props.editMode} key={uuidv4()} />;
         })}
 
         {this.props.editMode ? (
