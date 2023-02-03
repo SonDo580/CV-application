@@ -53,6 +53,15 @@ class School extends Component {
                 required
               />
             </div>
+
+            <p className="buttonContainer">
+              <button
+                type="button"
+                onClick={() => this.props.removeSchool(this.props.id)}
+              >
+                Remove this school
+              </button>
+            </p>
           </div>
         ) : (
           <table>
