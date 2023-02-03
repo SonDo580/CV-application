@@ -36,6 +36,7 @@ class Education extends Component {
               editMode={this.props.editMode}
               removeSchool={this.removeSchool}
               id={school.id}
+              removeAllowed={this.state.schools.length !== 1}
             />
           );
         })}

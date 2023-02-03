@@ -55,12 +55,14 @@ class School extends Component {
             </div>
 
             <p className="buttonContainer">
-              <button
-                type="button"
-                onClick={() => this.props.removeSchool(this.props.id)}
-              >
-                Remove this school
-              </button>
+              {this.props.removeAllowed ? (
+                <button
+                  type="button"
+                  onClick={() => this.props.removeSchool(this.props.id)}
+                >
+                  Remove this school
+                </button>
+              ) : null}
             </p>
           </div>
         ) : (
