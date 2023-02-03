@@ -50,7 +50,6 @@ class Information extends Component {
               <input
                 type="tel"
                 name="phone"
-                pattern="0[0-9]{9}"
                 value={this.state.phone}
                 onChange={this.handleChange}
                 required
