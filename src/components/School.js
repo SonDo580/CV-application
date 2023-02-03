@@ -54,8 +54,8 @@ class School extends Component {
               />
             </div>
 
-            <p className="buttonContainer">
-              {this.props.removeAllowed ? (
+            {this.props.removeAllowed ? (
+              <p className="buttonContainer">
                 <button
                   type="button"
                   className="danger"
@@ -63,8 +63,8 @@ class School extends Component {
                 >
                   Remove this school
                 </button>
-              ) : null}
-            </p>
+              </p>
+            ) : null}
           </div>
         ) : (
           <table>
