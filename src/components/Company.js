@@ -65,6 +65,18 @@ class Company extends Component {
                 required
               />
             </div>
+
+            <p className="buttonContainer">
+              {this.props.removeAllowed ? (
+                <button
+                  type="button"
+                  className="danger"
+                  onClick={() => this.props.removeCompany(this.props.id)}
+                >
+                  Remove this company
+                </button>
+              ) : null}
+            </p>
           </div>
         ) : (
           <table>

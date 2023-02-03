@@ -1,18 +1,34 @@
 import React, { Component } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Company from "./Company";
 
 class Experience extends Component {
   constructor() {
     super();
     this.state = {
-      companies: [""],
+      companies: [{ id: uuidv4() }],
     };
   }
 
   addCompany = () => {
     this.setState((prevState) => ({
-      companies: prevState.companies.concat(""),
+      companies: prevState.companies.concat({ id: uuidv4() }),
     }));
+  };
+
+  removeCompany = (id) => {
+    this.setState((prevState) => {
+      const indexRemove = prevState.companies.findIndex(
+        (company) => company.id === id
+      );
+
+      return {
+        companies: [
+          ...prevState.companies.slice(0, indexRemove),
+          ...prevState.companies.slice(indexRemove + 1),
+        ],
+      };
+    });
   };
 
   render() {
@@ -20,8 +36,16 @@ class Experience extends Component {
       <div className="container">
         <h2>Experience</h2>
 
-        {this.state.companies.map((company, index) => {
-          return <Company editMode={this.props.editMode} key={index} />;
+        {this.state.companies.map((company) => {
+          return (
+            <Company
+              key={company.id}
+              id={company.id}
+              editMode={this.props.editMode}
+              removeCompany={this.removeCompany}
+              removeAllowed={this.state.companies.length !== 1}
+            />
+          );
         })}
 
         {this.props.editMode ? (
